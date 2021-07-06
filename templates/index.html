@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Flight price</title>
+</head>
+<body>
+        <!-- As a heading -->
+        <div class = "navbar">
+            <h2>
+                FLIGHT PRICE
+            </h2>
+        </div>
+        <form action="/submit" method="POST">
+        <div class="container">
+            <div class = "container1">
+
+                Date of Departure: <br>
+                <input type="datetime-local" name="date_of_journey" id="">
+            </div>
+        </div>
+        <!-- <div class="container">
+            <div class = "container1">
+
+                Departure Time: <br>
+                <input type="time" name="departure_time" id="">
+            </div>
+        </div> -->
+        <div class="container">
+            <div class = "container1">
+
+                duraion (example:2h 15min=2.15): <br>
+                <input type="flot" name ="duration_hours">
+            </div>
+        </div>
+        <div class="container">
+            <div class = "container1">
+
+                source: <br>
+                <select name="source" id="">
+                    <option value="Delhi">Delhi</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Banglore">Banglore</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Chennai">Chennai</option>
+                </select>
+            </div>
+        </div>
+        <div class="container">
+            <div class = "container1">
+
+                Destination: <br>
+                <select name="destination" id="">
+                    <option value="Cochin">Cochin</option>
+                    <option value="Banglore">Banglore</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="New Delhi">New Delhi</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Kolkata">Kolkata</option>
+                </select>
+            </div>
+        </div>
+        <div class="container">
+            <div class = "container1">
+
+                Airline: <br>
+                <select name="Airline" id="">
+                    <option value="Jet Airways">Jet Airways</option>
+                    <option value="IndiGo">IndiGo</option>
+                    <option value="Air India">Air India</option>
+                    <option value="Multiple carriers">Multiple carriers</option>
+                    <option value="SpiceJet">SpiceJet</option>
+                    <option value="Vistara">Vistara</option>
+                    <option value="Air Asia">Air Asia</option>
+                    <option value="GoAir">GoAir</option>
+                    <option value="Multiple carriers Premium economy">Multiple carriers Premium economy</option>
+                    <option value="Jet Airways Business">Jet Airways Business</option>
+                    <option value="Vistara Premium economy">Vistara Premium economy</option>
+                    <option value="Trujet">Trujet</option>
+                </select>
+            </div>
+        </div>
+        <div class="container">
+            <div class = "container1">
+
+                Total Stops: <br>
+                <input type="number" name="total_stops">
+            </div>
+        </div>
+        <center>
+            <input type="submit" value="submit" class="button">
+        </center>
+    </form>
+    <center>
+        <h2>
+            {{prediction_text}}
+        </h2>
+    </center>
+    </body>
+</html>
