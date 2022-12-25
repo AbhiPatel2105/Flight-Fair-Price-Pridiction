@@ -1,5 +1,3 @@
-# flight_rate
-
 # Flight Fare Prediction: 
 
 ## Table of Content
